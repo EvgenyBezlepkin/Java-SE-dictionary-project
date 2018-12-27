@@ -1,0 +1,5 @@
+version=1.0
+port=8080
+dbHost=localhost
+dbPort=8081
+host=localhost

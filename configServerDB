@@ -1,0 +1,11 @@
+version=1.0
+port=8081
+dbName=jdbc:mysql://127.0.0.1:3306/bdj30
+user=root
+password=
+find=select id, definition from definitions where definitions.term_Id = (SELECT id FROM `terms` WHERE terms.term="&&")
+delete=DELETE FROM `definitions` WHERE id=&&;
+insert-term=INSERT INTO terms(term) VALUES ("&&")
+insert-def=INSERT INTO definitions(definition, term_Id) VALUES ("&&", (select id from terms where terms.term="$$"))
+host=localhost
+
